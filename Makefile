@@ -3,11 +3,11 @@ setup: releases/1/puma.rb releases/2/puma.rb releases/1/config.ru releases/2/con
 
 .PHONY: 1-active
 1-active:
-	ln -sf releases/1 current
+	ln -svhF releases/1 current
 
 .PHONY: 2-active
 2-active:
-	ln -sf releases/2 current
+	ln -svhF releases/2 current
 
 releases/1:
 	mkdir -p releases/1
