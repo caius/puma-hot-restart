@@ -5,3 +5,6 @@ puts "[puma.rb] expanded #{File.expand_path(__dir__)}"
 app_dir = File.expand_path(__dir__)
 directory app_dir
 rackup File.join(app_dir, "config.ru")
+
+threads 16, 16
+workers 2
